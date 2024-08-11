@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://suitmedia-backend.suitdev.com",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

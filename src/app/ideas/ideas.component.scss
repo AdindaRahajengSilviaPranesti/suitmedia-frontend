@@ -1,0 +1,90 @@
+.banner {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+
+
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+    }
+  }
+
+
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #FF8225;
+    transform: skewY(-9deg); // Membuat area miring di bawah banner
+    transform-origin: 100% 0;
+    z-index: 1;
+  }
+}
+
+
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; // Space between boxes
+  padding: 20px;
+
+  .news-item {
+    background-color: #fff; // Background color for the news item
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .news-details {
+      padding: 10px;
+
+      .news-date {
+        font-size: 14px;
+        color: #888; // Date color
+      }
+
+      .news-title {
+        font-size: 16px;
+        color: #333; // Title color
+        margin: 5px 0 0;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px); // Lift effect on hover
+    }
+  }
+}
+
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}

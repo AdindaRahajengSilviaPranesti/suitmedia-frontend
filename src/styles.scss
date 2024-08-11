@@ -1,0 +1,31 @@
+
+body{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+  
+  }
+  .bg-animate {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    // background: linear-gradient(315deg, #FFF9D0 10%,#F7B787 35%, #CAF4FF 38%, #A0DEFF 68%, #5AB2FF 100%);
+    background: linear-gradient(315deg, #5AB2FF 10%, #A0DEFF 35%, #CAF4FF 38%, #F7B787 68%, #FFF9D0 100%);
+    animation: gradient 30s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    -webkit-animation: gradient 30s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+  }
+  

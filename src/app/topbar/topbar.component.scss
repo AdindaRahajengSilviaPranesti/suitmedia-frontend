@@ -1,0 +1,104 @@
+.topbar {
+    background-color: rgba(255, 130, 37, 0.9); // Background transparent
+    color: #DAD4B5; // Warna teks default
+    padding: 8px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+  
+    &.hidden {
+      top: -100px; // Menghilangkan header saat scroll ke bawah
+    }
+  
+    &.scrolled {
+      background-color: rgba(255, 130, 37, 0.9); // Background sedikit transparent saat scroll
+    }
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    .logo img {
+      height: 55px;  // Ukuran default gambar logo
+      width: auto;   // Menjaga proporsi gambar
+    }
+  
+    .logo a {
+      display: flex;
+      align-items: center;
+    }
+  
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+  
+      li {
+        a {
+          color: #DAD4B5;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 18px; // Ukuran teks default
+          &:hover {
+            color: #D0E7D2; // Warna hover link
+            border-bottom: 2px solid #DAD4B5; // Underline saat hover
+          }
+  
+          &.active {
+            border-bottom: 2px solid #D0E7D2; // Active state untuk halaman saat ini
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive
+  @media (max-width: 768px) {
+    .topbar {
+      .container {
+        flex-direction: column;
+      }
+  
+      .logo img {
+        height: 45px;  // Ukuran logo lebih kecil untuk layar kecil
+      }
+  
+      .menu {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin-top: 10px;
+  
+        li a {
+          font-size: 13px; // Ukuran teks lebih kecil untuk layar kecil
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .topbar {
+      padding: 10px 0;
+  
+      .logo img {
+        height: 35px;  // Ukuran logo lebih kecil untuk layar sangat kecil
+      }
+  
+      .menu {
+        gap: 8px;
+  
+        li a {
+          font-size: 14px; // Ukuran teks lebih kecil untuk layar sangat kecil
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,22 @@
+<section class="banner">
+  <div class="banner-image">
+    <img src="assets/img/banner.png" alt="Ideas Banner">
+  </div>
+ 
+</section> &nbsp;
+
+<div class="banner-text">
+  <h1>Innovative Ideas</h1>
+  <p>Explore the latest creative concepts and innovations!</p>
+</div>
+
+
+<div class="news-container">
+  <div class="news-item" *ngFor="let news of newsItems">
+    <img [src]="news.image" alt="News Image">
+    <div class="news-details">
+      <span class="news-date">{{ news.date }}</span>
+      <h3 class="news-title">{{ news.title }}</h3>
+    </div>
+  </div>
+</div>
